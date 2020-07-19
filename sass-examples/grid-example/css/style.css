@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  height: 100vh;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.2fr 1.5fr;
+      grid-template-columns: 1fr 1.2fr 1.5fr;
+  -ms-grid-rows: 1fr 3fr 4fr 2fr;
+      grid-template-rows: 1fr 3fr 4fr 2fr;
+      grid-template-areas: "main main header" "main main candy" "nom yum candy" "footer footer candy";
+  height: 100vh;
+  margin: 1em;
+  text-align: center;
+}
+
+main {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+  background-color: #977415;
+}
+
+.nom {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: nom;
+  background-color: #f4f4f4;
+}
+
+.yum {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: yum;
+  background-color: #dddddd;
+}
+
+.footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  background-color: #cccccc;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: header;
+  background-color: #333333;
+  color: #fff;
+}
+
+.candy {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: candy;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/candy.jpg") no-repeat;
+  background-size: cover;
+}
+/*# sourceMappingURL=style.css.map */

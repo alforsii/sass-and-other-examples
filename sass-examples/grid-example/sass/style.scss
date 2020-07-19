@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.5fr;
+  grid-template-rows: 1fr 3fr 4fr 2fr;
+  grid-template-areas:
+    "main main header"
+    "main main candy"
+    "nom yum candy"
+    "footer footer candy";
+  height: 100vh;
+  margin: 1em;
+  text-align: center;
+}
+
+main {
+  grid-area: main;
+  background-color: #977415;
+}
+.nom {
+  grid-area: nom;
+  background-color: #f4f4f4;
+}
+.yum {
+  grid-area: yum;
+  background-color: #dddddd;
+}
+.footer {
+  grid-area: footer;
+  background-color: lighten($color: #000000, $amount: 80%);
+}
+header {
+  grid-area: header;
+  background-color: darken($color: #fff, $amount: 80%);
+  color: #fff;
+}
+.candy {
+  grid-area: candy;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/candy.jpg")
+    no-repeat;
+  background-size: cover;
+}
